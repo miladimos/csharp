@@ -163,7 +163,8 @@ namespace notepad
 
         private void findToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmFind frmFind = new frmFind();
+            frmFind.ShowDialog();
         }
 
         private void findNextToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,12 +179,14 @@ namespace notepad
 
         private void replaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmReplace frmReplace = new frmReplace();
+            frmReplace.ShowDialog();
         }
 
         private void gotoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmGoto frmGoto = new frmGoto();
+            frmGoto.ShowDialog();
         }
 
         private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
@@ -283,12 +286,25 @@ namespace notepad
 
         private void aboutNotepadToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAbout frmAbout = new frmAbout();
+            frmAbout.ShowDialog();
         }
 
         private void richTextBoxMain_TextChanged(object sender, EventArgs e)
         {
             fileUpdated = true;
+            if (richTextBoxMain.TextLength > 0)
+            {
+                cutToolStripMenuItem.Enabled = true;
+                colorToolStripMenuItem.Enabled = true;
+                selectAllToolStripMenuItem.Enabled = true;
+            }
+            else
+            {
+                cutToolStripMenuItem.Enabled = false;
+                colorToolStripMenuItem.Enabled = false;
+                selectAllToolStripMenuItem.Enabled = false;
+            }
         }
     }
 }
