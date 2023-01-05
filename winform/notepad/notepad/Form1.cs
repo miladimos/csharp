@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
 
@@ -6,11 +7,24 @@ namespace notepad
 {
     public partial class frmMain : Form
     {
-        string currentFilePath;
+        private bool fileAlreadySaved;
+        private bool fileUpdated;
+        private string currentFileName;
+        private string formTitle;
 
         public frmMain()
         {
             InitializeComponent();
+
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            fileAlreadySaved = false;
+            fileUpdated = false;
+            currentFileName = null;
+
 
 
         }
@@ -39,14 +53,32 @@ namespace notepad
             fileDialog.Filter = "Text Document(*.txt)|*.txt|All Files(*.*)|*.*";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
-                richTextBoxMain.LoadFile(fileDialog.FileName, RichTextBoxStreamType.PlainText);
-                this.Text = fileDialog.FileName;
+                if (Path.GetExtension(fileDialog.FileName) == ".txt")
+                {
+                    richTextBoxMain.LoadFile(fileDialog.FileName, RichTextBoxStreamType.PlainText);
+                    this.Text = Path.GetFileName(fileDialog.FileName);
+                }
+                else if (Path.GetExtension(fileDialog.FileName) == ".rtf")
+                {
+                    richTextBoxMain.LoadFile(fileDialog.FileName, RichTextBoxStreamType.RichText);
+                    this.Text = Path.GetFileName(fileDialog.FileName);
+                }
+                else
+                {
+                    this.Text = "Selected File is not text file";
+                }
+
+                fileAlreadySaved = true;
+                fileUpdated = false;
+                currentFileName = fileDialog.FileName;
+                formTitle = "";
+
             }
         }
-
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(currentFilePath))
+
+            if (string.IsNullOrEmpty("") && fileAlreadySaved)
             {
                 SaveFileDialog fileDialog = new SaveFileDialog();
                 fileDialog.Title = "Save";
@@ -59,9 +91,9 @@ namespace notepad
             }
             else
             {
-                richTextBoxMain.SaveFile(currentFilePath);
+                richTextBoxMain.SaveFile("");
             }
-           
+
         }
 
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,6 +106,11 @@ namespace notepad
                 richTextBoxMain.SaveFile(fileDialog.FileName, RichTextBoxStreamType.PlainText);
                 this.Text = fileDialog.FileName;
             }
+
+            fileAlreadySaved = true;
+            fileUpdated = false;
+            currentFileName = fileDialog.FileName;
+            formTitle = "";
         }
 
         private void pageSetupToolStripMenuItem_Click(object sender, EventArgs e)
@@ -158,7 +195,7 @@ namespace notepad
         private void timeDateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DateTime nowDateTime = DateTime.Now;
-
+            richTextBoxMain.SelectedText = nowDateTime.ToString();
         }
 
         private void fontToolStripMenuItem_Click(object sender, EventArgs e)
@@ -174,11 +211,12 @@ namespace notepad
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(wordWrapToolStripMenuItem.Checked == true)
+            if (wordWrapToolStripMenuItem.Checked == true)
             {
                 wordWrapToolStripMenuItem.Checked = false;
                 richTextBoxMain.WordWrap = false;
-            } else
+            }
+            else
             {
                 wordWrapToolStripMenuItem.Checked = true;
 
@@ -206,7 +244,16 @@ namespace notepad
 
         private void statusBarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (statusBarToolStripMenuItem.Checked == true)
+            {
+                statusBarToolStripMenuItem.Checked = false;
+                statusStripMain.Visible = false;
+            }
+            else
+            {
+                statusBarToolStripMenuItem.Checked = true;
+                statusStripMain.Visible = true;
+            }
         }
 
         private void zoomInToolStripMenuItem_Click(object sender, EventArgs e)
@@ -239,5 +286,9 @@ namespace notepad
 
         }
 
+        private void richTextBoxMain_TextChanged(object sender, EventArgs e)
+        {
+            fileUpdated = true;
+        }
     }
 }

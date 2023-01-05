@@ -1,0 +1,11 @@
+E:\Programming\opensource\csharp\winform\Paint\Paint\bin\Debug\Paint.exe.config
+E:\Programming\opensource\csharp\winform\Paint\Paint\bin\Debug\Paint.exe
+E:\Programming\opensource\csharp\winform\Paint\Paint\bin\Debug\Paint.pdb
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.csproj.AssemblyReference.cache
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.csproj.SuggestedBindingRedirects.cache
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.frmMain.resources
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.Properties.Resources.resources
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.csproj.GenerateResource.cache
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.csproj.CoreCompileInputs.cache
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.exe
+E:\Programming\opensource\csharp\winform\Paint\Paint\obj\Debug\Paint.pdb
