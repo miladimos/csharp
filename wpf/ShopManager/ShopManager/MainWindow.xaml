@@ -1,0 +1,43 @@
+﻿<Window x:Class="ShopManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopManager"
+        mc:Ignorable="d"
+        Title="Shop Management" Height="700" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Margin="2" Background="WhiteSmoke" Width="250" HorizontalAlignment="Center" BorderThickness="2" BorderBrush="Gray">
+            <StackPanel>
+                <Button Margin="20,30" Height="50" FontSize="22" Name="btnHome" Click="btnHome_Click">Home</Button>
+                <Button Margin="20,30" Height="50" FontSize="22" Name="btnEmployees" Click="btnEmployees_Click">Employees</Button>
+                <Button Margin="20,30" Height="50" FontSize="22" Name="btnCustomers" Click="btnCustomers_Click">Customers</Button>
+                <Button Margin="20,30" Height="50" FontSize="22" Name="btnProducts" Click="btnProducts_Click">Products</Button>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Collapsed" Name="HomePanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
+            <StackPanel HorizontalAlignment="Stretch">
+                <Label FontSize="35" FontWeight="Heavy" HorizontalAlignment="Center">Shop Management</Label>
+            </StackPanel>
+        </Border>
+
+        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Visible" Name="EmployeesPanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
+            <Label FontSize="35" FontWeight="Heavy" HorizontalAlignment="Center">Employees Page</Label>
+        </Border>
+
+        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Collapsed" Name="CustomersPanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
+            <Label FontSize="35" FontWeight="Heavy" HorizontalAlignment="Center">Customer</Label>
+        </Border>
+
+        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Collapsed" Name="ProductsPanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
+            <Label FontSize="35" FontWeight="Heavy" HorizontalAlignment="Center">Products</Label>
+        </Border>
+
+    </Grid>
+</Window>
