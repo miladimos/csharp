@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataAccess;
+using DataAccess.Models;
+
 
 namespace ShopManager
 {
@@ -20,9 +23,32 @@ namespace ShopManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        EmployeeDataAccess EmployeeDataAccess = new EmployeeDataAccess();
+        CustomerDataAccess CustomerDataAccess = new CustomerDataAccess();
+        ProductDataAccess ProductDataAccess = new ProductDataAccess();
+
+        List<Employee> Employees= new List<Employee>();
+        List<Customer> Customers= new List<Customer>();
+        List<Product> Products= new List<Product>();
+
+        public Employee currentEmployee { get; set; } = new Employee();
+        public Customer currentCustomer { get; set; } = new Customer();
+        public Product currentProduct { get; set; } = new Product(); 
+
+
+
         public MainWindow()
         {
             InitializeComponent();
+
+            fillData();
+        }
+
+        private void fillData()
+        {
+            Employees = EmployeeDataAccess.Employees;
+            Customers = CustomerDataAccess.Customers;
+            Products = ProductDataAccess.Products;
         }
 
         private void btnHome_Click(object sender, RoutedEventArgs e)

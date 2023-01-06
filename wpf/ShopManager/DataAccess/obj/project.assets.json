@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net7.0-windows7.0": {
-      "DataAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/DataAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DataAccess.dll": {}
-        }
-      }
-    }
+    "net7.0": {}
   },
-  "libraries": {
-    "DataAccess/1.0.0": {
-      "type": "project",
-      "path": "../DataAccess/DataAccess.csproj",
-      "msbuildProject": "../DataAccess/DataAccess.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    "net7.0-windows7.0": [
-      "DataAccess >= 1.0.0"
-    ]
+    "net7.0": []
   },
   "packageFolders": {
     "C:\\Users\\Milad-PC\\.nuget\\packages\\": {},
@@ -33,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\ShopManager\\ShopManager.csproj",
-      "projectName": "ShopManager",
-      "projectPath": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\ShopManager\\ShopManager.csproj",
+      "projectUniqueName": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\DataAccess\\DataAccess.csproj",
+      "projectName": "DataAccess",
+      "projectPath": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\Milad-PC\\.nuget\\packages\\",
-      "outputPath": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\ShopManager\\obj\\",
+      "outputPath": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -48,7 +29,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net7.0-windows"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -56,13 +37,9 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0-windows7.0": {
-          "targetAlias": "net7.0-windows",
-          "projectReferences": {
-            "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "E:\\Programming\\opensource\\csharp\\wpf\\ShopManager\\DataAccess\\DataAccess.csproj"
-            }
-          }
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -72,8 +49,8 @@
       }
     },
     "frameworks": {
-      "net7.0-windows7.0": {
-        "targetAlias": "net7.0-windows",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "imports": [
           "net461",
           "net462",
@@ -88,9 +65,6 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
-          },
-          "Microsoft.WindowsDesktop.App.WPF": {
-            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
