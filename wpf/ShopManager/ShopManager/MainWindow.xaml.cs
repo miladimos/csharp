@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,14 +28,13 @@ namespace ShopManager
         CustomerDataAccess CustomerDataAccess = new CustomerDataAccess();
         ProductDataAccess ProductDataAccess = new ProductDataAccess();
 
-        List<Employee> Employees= new List<Employee>();
-        List<Customer> Customers= new List<Customer>();
-        List<Product> Products= new List<Product>();
+        ObservableCollection<Employee> Employees = new ObservableCollection<Employee>();
+        ObservableCollection<Customer> Customers = new ObservableCollection<Customer>();
+        ObservableCollection<Product> Products = new ObservableCollection<Product>();
 
         public Employee currentEmployee { get; set; } = new Employee();
         public Customer currentCustomer { get; set; } = new Customer();
-        public Product currentProduct { get; set; } = new Product(); 
-
+        public Product currentProduct { get; set; } = new Product();
 
 
         public MainWindow()
@@ -42,6 +42,7 @@ namespace ShopManager
             InitializeComponent();
 
             fillData();
+            EmployeesDataGrid.ItemsSource = Employees;
         }
 
         private void fillData()
@@ -56,7 +57,7 @@ namespace ShopManager
             HomePanel.Visibility = Visibility.Visible;
             EmployeesPanel.Visibility = Visibility.Collapsed;
             CustomersPanel.Visibility = Visibility.Collapsed;
-            ProductsPanel.Visibility = Visibility.Collapsed;    
+            ProductsPanel.Visibility = Visibility.Collapsed;
         }
 
         private void btnEmployees_Click(object sender, RoutedEventArgs e)
@@ -81,6 +82,43 @@ namespace ShopManager
             EmployeesPanel.Visibility = Visibility.Collapsed;
             CustomersPanel.Visibility = Visibility.Collapsed;
             ProductsPanel.Visibility = Visibility.Visible;
+        }
+
+        private void EmployeesDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (EmployeesDataGrid.SelectedIndex >= 0)
+            {
+                currentEmployee = EmployeesDataGrid.SelectedItem as Employee;
+                EmployeeLabel.Content = currentEmployee.GetBasicInfo();
+            }
+        }
+
+        private void btnAddEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditEmployee addEditEmployee = new AddEditEmployee(EmployeeDataAccess);
+
+            addEditEmployee.ShowDialog();
+        }
+
+        private void btnDeleteEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            if (EmployeesDataGrid.SelectedIndex >= 0)
+            {
+                currentEmployee = EmployeesDataGrid.SelectedItem as Employee;
+                EmployeeDataAccess.RemoveEmployee(currentEmployee.Id);
+                EmployeeLabel.Content = "---";
+            }
+        }
+
+        private void btnEditEmployee_Click(object sender, RoutedEventArgs e)
+        {
+            if (EmployeesDataGrid.SelectedIndex >= 0)
+            {
+                currentEmployee = EmployeesDataGrid.SelectedItem as Employee;
+                AddEditEmployee addEditEmployee = new AddEditEmployee(EmployeeDataAccess, currentEmployee);
+
+                addEditEmployee.ShowDialog();
+            }
         }
     }
 }

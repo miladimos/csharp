@@ -19,6 +19,8 @@ namespace DataAccess.Models
         public decimal BaseSalary { get; set; }
 
 
+        public Employee() { }
+
         public string GetBasicInfo()
         {
             string finalStr = FirstName + " " + LastName +

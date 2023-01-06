@@ -21,14 +21,33 @@
             </StackPanel>
         </Border>
 
-        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Collapsed" Name="HomePanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
+        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Visible" Name="HomePanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
             <StackPanel HorizontalAlignment="Stretch">
                 <Label FontSize="35" FontWeight="Heavy" HorizontalAlignment="Center">Shop Management</Label>
             </StackPanel>
         </Border>
 
-        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Visible" Name="EmployeesPanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
-            <Label FontSize="35" FontWeight="Heavy" HorizontalAlignment="Center">Employees Page</Label>
+        <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Collapsed" Name="EmployeesPanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">
+            <StackPanel HorizontalAlignment="Stretch" Background="WhiteSmoke" Margin="15">
+                <DataGrid Margin="5" Name="EmployeesDataGrid" ColumnWidth="*" MinColumnWidth="100" CanUserAddRows="False" CanUserResizeColumns="True" SelectionChanged="EmployeesDataGrid_SelectionChanged">
+                    
+                </DataGrid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <WrapPanel Margin="5" Grid.Row="0">
+                        <Label Margin="2" FontWeight="Bold">Detail Info: </Label>
+                        <Label Margin="2" Content="---" Name="EmployeeLabel"></Label>
+                    </WrapPanel>
+                    <DockPanel HorizontalAlignment="Center" Margin="20" Grid.Row="1">
+                        <Button Margin="10" Height="50" Width="150" Name="btnAddEmployee" Click="btnAddEmployee_Click">Add Employee</Button>
+                        <Button Margin="10" Height="50" Width="150" Name="btnDeleteEmployee" Click="btnDeleteEmployee_Click">Delete</Button>
+                        <Button Margin="10" Height="50" Width="150" Name="btnEditEmployee" Click="btnEditEmployee_Click">Edit</Button>
+                    </DockPanel>
+                </Grid>
+            </StackPanel>
         </Border>
 
         <Border Grid.Column="1" Margin="2" Background="WhiteSmoke" Visibility="Collapsed" Name="CustomersPanel" HorizontalAlignment="Stretch" BorderBrush="Gray" BorderThickness="2">

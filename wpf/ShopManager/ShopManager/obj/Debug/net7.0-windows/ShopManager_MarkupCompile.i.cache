@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\App.xaml
-11407045341
+2-524815806
 
-5148747413
+6-1172480147
 199194472672
-MainWindow.xaml;
+AddEditEmployee.xaml;MainWindow.xaml;
 
-False
+True
 

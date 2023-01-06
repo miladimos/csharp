@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v7.0": {
       "ShopManager/1.0.0": {
+        "dependencies": {
+          "DataAccess": "1.0.0"
+        },
         "runtime": {
           "ShopManager.dll": {}
+        }
+      },
+      "DataAccess/1.0.0": {
+        "runtime": {
+          "DataAccess.dll": {}
         }
       }
     }
   },
   "libraries": {
     "ShopManager/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataAccess/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using DataAccess.Models;
 
 
@@ -11,7 +12,7 @@ namespace DataAccess
             ReadProdutcs();
         }
 
-        public List<Customer> Customers { get; set; }
+        public ObservableCollection<Customer> Customers { get; set; } = new ObservableCollection<Customer>();
 
         private void ReadProdutcs()
         {

@@ -1,0 +1,46 @@
+﻿<Window x:Class="ShopManager.AddEditEmployee"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShopManager"
+        mc:Ignorable="d"
+        Title="AddEditEmployee" Height="650" Width="800" FontSize="24">
+    <Grid>
+        <StackPanel Margin="20">
+            <DockPanel Margin="10">
+                <Label Margin="10">First Name: </Label>
+                <TextBox HorizontalAlignment="Right" Width="500" Name="txtFirstName" />
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label Margin="10">Last Name:</Label>
+                <TextBox HorizontalAlignment="Right" Width="500" Name="txtLastName" />
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label Margin="10">Phone:</Label>
+                <TextBox HorizontalAlignment="Right" Width="500" Name="txtPhone" />
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label Margin="10">Address:</Label>
+                <TextBox HorizontalAlignment="Right" Width="500" Name="txtAddress" />
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label Margin="10">Base Salary:</Label>
+                <TextBox HorizontalAlignment="Right" Width="500" Name="txtBaseSalary" />
+            </DockPanel>
+            <DockPanel Margin="10">
+                <Label Margin="10">Deparment:</Label>
+                <ComboBox HorizontalAlignment="Right" Width="500" Name="cmbDepartment">
+                    <ComboBoxItem>Production</ComboBoxItem>
+                    <ComboBoxItem>Sales</ComboBoxItem>
+                    <ComboBoxItem>Advertisment</ComboBoxItem>
+                    <ComboBoxItem>Management</ComboBoxItem>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel Margin="10" HorizontalAlignment="Right">
+                <Button Margin="10" Width="120" Name="btnCancel" Click="btnCancel_Click">Cancel</Button>
+                <Button Margin="10" Width="120" Name="btnOk" Click="btnOk_Click">Ok</Button>
+            </DockPanel>
+        </StackPanel>
+    </Grid>
+</Window>

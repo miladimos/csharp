@@ -19,3 +19,8 @@ E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-wi
 E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-windows\ShopManager.pdb
 E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-windows\ShopManager.genruntimeconfig.cache
 E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-windows\ref\ShopManager.dll
+E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\bin\Debug\net7.0-windows\DataAccess.dll
+E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\bin\Debug\net7.0-windows\DataAccess.pdb
+E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-windows\ShopManager.csproj.CopyComplete
+E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-windows\AddEditEmployee.g.cs
+E:\Programming\opensource\csharp\wpf\ShopManager\ShopManager\obj\Debug\net7.0-windows\AddEditEmployee.baml
