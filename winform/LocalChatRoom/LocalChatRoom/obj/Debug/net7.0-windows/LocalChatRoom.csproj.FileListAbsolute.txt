@@ -1,0 +1,17 @@
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\bin\Debug\net7.0-windows\LocalChatRoom.exe
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\bin\Debug\net7.0-windows\LocalChatRoom.deps.json
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\bin\Debug\net7.0-windows\LocalChatRoom.runtimeconfig.json
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\bin\Debug\net7.0-windows\LocalChatRoom.dll
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\bin\Debug\net7.0-windows\LocalChatRoom.pdb
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.csproj.AssemblyReference.cache
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.FormServer.resources
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.csproj.GenerateResource.cache
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.AssemblyInfoInputs.cache
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.AssemblyInfo.cs
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.csproj.CoreCompileInputs.cache
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.dll
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\refint\LocalChatRoom.dll
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.pdb
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\LocalChatRoom.genruntimeconfig.cache
+E:\Programming\opensource\csharp\winform\LocalChatRoom\LocalChatRoom\obj\Debug\net7.0-windows\ref\LocalChatRoom.dll
